@@ -1,5 +1,7 @@
 # SunshineResolutionTool
- A tool to automatically change resolution for Sunshine game streaming.
+ A tool to automatically change display modes for Sunshine game streaming.
+
+ Conveniently detects when a Sunshine client connects, and automatically adjusts resolution, refreshrate, and HDR enablement. Settings are restored to default state when client disconnects.
 
 # Prerequisite
  Install [WindowsDisplayManager](https://github.com/patrick-theprogrammer/WindowsDisplayManager/tree/main).
@@ -28,3 +30,7 @@
  8. Name the shortcut `SunshineResolutionTool`.
  9. Modify the shortcut to "Start in" the same directory as your executable.
  10. Run the shortcut.
+
+# TODO
+- Automatic install script
+- Documentation
