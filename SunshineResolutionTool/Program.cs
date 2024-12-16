@@ -23,6 +23,18 @@ namespace SunshineResolutionTool
 
         static void Main(string[] args)
         {
+            if (args.Length > 0 && args[0] == "-hide")
+            {
+                Process proc = new Process();
+
+                proc.StartInfo.FileName = Process.GetCurrentProcess().ProcessName;
+                proc.StartInfo.CreateNoWindow = true;
+                proc.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                proc.StartInfo.WorkingDirectory = Environment.CurrentDirectory;
+                proc.Start();
+                Environment.Exit(1);
+            }
+
             if (!File.Exists("settings.cfg"))
             {
                 Console.WriteLine("Settings file (settings.cfg) does not exist. Creating settings file.");
@@ -31,7 +43,7 @@ namespace SunshineResolutionTool
                     "#This is the display mode that will be restore when game streaming ends\r\ndefaultWidth=5120\r\ndefaultHeight=1440\r\ndefaultRefreshRate=240\r\ndefaultHDR=1\r\n\r\n#This is the display mode that will be used for game streaming\r\nstreamWidth=1920\r\nstreamHeight=1080\r\nstreamRefreshRate=60\r\nstreamHDR=0\r\n\r\n#This is the location of the sunshine.log file\r\nlogFilePath=C:\\Program Files\\Sunshine\\config\\sunshine.log");
 
                 Console.WriteLine("Please modify the settings file (settings.cfg) and try again.");
-                Console.WriteLine("Press any key to continue...");
+                Console.WriteLine("Press any key to exit...");
                 Console.ReadKey();
                 Environment.Exit(1);
             }
