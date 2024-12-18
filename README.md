@@ -9,10 +9,6 @@
  Run Powershell **as admin**, and exectute the following command:
  
  `Install-Module -Name WindowsDisplayManager`
- 
- **Note**: You may need to set the [execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies) to unrestricted:
- 
- `Set-ExecutionPolicy Unrestricted`
 
  # Setup
  1. Install [WindowsDisplayManager](https://github.com/patrick-theprogrammer/WindowsDisplayManager/tree/main) (instructions above).
